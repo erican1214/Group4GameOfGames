@@ -13,7 +13,7 @@ public class PlayGames {
         System.out.println("--- Welcome to the Game of Games ---");
 
         // Use methods from GetInput for initial setup
-        System.out.print("Select Game Mode (1. PvP, 2. PvE): ");
+        System.out.print("Select Game Mode (1. Player vs. Player, 2. Player vs. Computer): ");
         int gameMode = inputUtility.getInputInt();
         while (true) {
             if (gameMode == 1 || gameMode == 2) {
@@ -65,7 +65,17 @@ public class PlayGames {
 
     private static void launchGame(int choice, int mode) {
         // Implementation for each game class goes here
-        System.out.println("Executing game " + choice + "...");
+        if (choice == THIMBLE) {
+            FindTheThimble.findTheThimble();
+        } else if (choice == COIN_FLIP) {
+            CoinFlip.coinFlip();
+        } else if (choice == GUESS_NUM) {
+            GuessTheNumber.main(new String[]{});
+        } else if (choice == EVEN_ODD) {
+            EvenOdd.main(new String[]{});
+        } else if (choice == RED_THREAD) {
+            System.out.println("Find the Red Thread game coming soon!");
+        }
     }
 
     private static void displayOverallResults(int p1, int p2) {

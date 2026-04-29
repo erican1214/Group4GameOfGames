@@ -1,7 +1,8 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public void coinFlip(){
+public class CoinFlip {
+    public static void coinFlip(){
     Scanner scnr = new Scanner(System.in);
     int numOfGames;
     int who;
@@ -39,7 +40,7 @@ public void coinFlip(){
     scnr.nextLine();
 
     //asks for who will be guesser
-    System.out.println("Who will be the guesser? Enter 1 for Player 1 and 2 for Player 2, Enter 100 for TEST mode");
+    System.out.println("Who will be the guesser? Enter 1 for Player 1 and 2 for Computer, Enter 100 for TEST mode");
     //to catch strings if enterded
     while (!scnr.hasNextInt()) {
         System.out.println("Invalid input. Please enter 1 or 2.");
@@ -69,10 +70,10 @@ public void coinFlip(){
     }
     if (who == 1){
         guesser = "Player 1";
-        flipper = "Player 2";
+        flipper = "Computer";
     }
     else{
-        guesser = "Player 2";
+        guesser = "Computer";
         flipper = "Player 1";
     }
 
@@ -161,9 +162,9 @@ public void coinFlip(){
 
 
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    coinFlip();
-
+    //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+    // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+    public static void main(String[] args) {
+        coinFlip();
+    }
 }
