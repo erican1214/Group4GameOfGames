@@ -44,9 +44,7 @@ class EvenOddFinalTest {
         assertEquals(expected, EvenOdd.getSum(a, b));
     }
  
-    // ---------------------------------------------------------------
-    // isInRange() — pure logic in GetInput, no I/O
-    // ---------------------------------------------------------------
+    // isInRange()
  
     @Test
     void isInRange_withinRange_returnsTrue() {
@@ -78,9 +76,7 @@ class EvenOddFinalTest {
         assertFalse(gi.isInRange(6, 1, 5));
     }
  
-    // ---------------------------------------------------------------
     // getInputInt() — GetInput returns -1 on non-integer input
-    // ---------------------------------------------------------------
  
     @Test
     void getInputInt_validInt_returnsValue() {
