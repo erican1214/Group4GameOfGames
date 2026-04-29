@@ -1,5 +1,5 @@
 public class EvenOdd {
-    public static void main(String[] args) {
+    public static int playGame() {
         //REQUIRES GetInput.java FILE!
         GetInput getInputClass = new GetInput();
         int min = 1;
@@ -58,9 +58,11 @@ public class EvenOdd {
         }
         if (player1Score == threshold) {
             System.out.println("Player 1 wins!");
+            return 1;
         }
         else {
             System.out.println("Player 2 wins!");
+            return 2;
         }
     }
 
@@ -76,5 +78,9 @@ public class EvenOdd {
 
     public static int getSum(int num1, int num2) {
         return num1 + num2;
+    }
+
+    public static void main(String[] args) {
+        playGame();
     }
 }

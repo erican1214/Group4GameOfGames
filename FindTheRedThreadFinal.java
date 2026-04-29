@@ -10,14 +10,14 @@ public static void main(String[] args) {
     }
 //-------------------------------------------------------------------------------------
 
-public static void play() {
+public static int play() {
 
     int totalSpools = 20;
     int minPull = 1;
     int maxPull = 10;
     String redSpool = "red";
     String Player1 = "Player 1";
-    String Player2 = "Player 2";
+    String Player2 = "Computer";
     int testCode = 100;
 
     GetInput input = new GetInput();
@@ -106,7 +106,11 @@ public static void play() {
                 System.out.println(activePullerName + " found the Red Spool!");
                 System.out.println(activePullerName + " wins the game!");
                 System.out.println("===========================================");
-                break;
+                if (activePullerName.equals("Player 1")) {
+                    return 1;
+                } else {
+                    return 2;
+                }
             } else {
             System.out.println(activePullerName + " pulled " + actualPulled + " spool(s) - no red spool found.");
             System.out.println("There are " + box.size() + " spool(s) left in the box.");
@@ -116,5 +120,6 @@ public static void play() {
             activePullerName = otherPullerName;
             otherPullerName = temp;
         }
+        return 0;
     }
 }
