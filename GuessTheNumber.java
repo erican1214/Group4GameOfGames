@@ -1,5 +1,18 @@
 public class GuessTheNumber {
     public static void main(String[] args) {
+        //Instructions
+        System.out.println("Welcome to Guess the Number game!");
+        System.out.println("There are two players: Player vs Computer");
+        System.out.println("First, the player will pick a range of numbers for the game.");
+        System.out.println("Then the player will choose how many guesses can be made. (Must be half range of numbers)");
+        System.out.println("Then the selector will pick one of the two roles: Guesser and Selector");
+        System.out.println("The Selector will choose a target number, and the Guesser will guess the number.");
+        System.out.println("If the Guesser correctly guesses the number before they run out of guesses, the Guesser wins.");
+        System.out.println("If the Guesser incorrectly guesses the number, but still have guesses left,");
+        System.out.println("The Selector will say if the target number is higher or lower.");
+        System.out.println("If the Guesser does not guess the correct number before they run out of guesses, the Selector wins.");
+        System.out.println();
+
         //REQUIRES GetInput.java FILE!
         GetInput getInputClass = new GetInput();
         int min = 0;

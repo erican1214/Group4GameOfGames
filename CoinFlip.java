@@ -1,5 +1,5 @@
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 
 public void coinFlip(){
     Scanner scnr = new Scanner(System.in);

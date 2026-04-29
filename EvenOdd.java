@@ -1,5 +1,18 @@
 public class EvenOdd {
     public static void main(String[] args) {
+        //Instructions
+        System.out.println("Welcome to Even Odd game!");
+        System.out.println("There are two players: Player 1 vs Player 2");
+        System.out.println("Player 1 will pick to bet on even or odd.");
+        System.out.println("Player 2 will get the option Player 1 did not pick.");
+        System.out.println("Player 1 and Player 2 will each 'throw a hand'");
+        System.out.println("(Picking out a number from 1-5).");
+        System.out.println("The system will calculate the sum of the numbers.");
+        System.out.println("If the sum is even, then the player who bet even will win the round.");
+        System.out.println("If the sum is odd, then the player who bet odd will win the round.");
+        System.out.println("Whichever player wins the most rounds first wins!");
+        System.out.println();
+        
         //REQUIRES GetInput.java FILE!
         GetInput getInputClass = new GetInput();
         int min = 1;
