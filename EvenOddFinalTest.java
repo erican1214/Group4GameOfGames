@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
  *         org.junit.platform.console.standalone.ConsoleLauncher \
  *         --select-class=EvenOddTest
  */
-class EvenOddTest {
+class EvenOddFinalTest {
 
     // ---------------------------------------------------------------
     // getSum() — pure arithmetic, no I/O
