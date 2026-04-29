@@ -46,9 +46,15 @@ public class PlayGames {
                 displayOverallResults(p1TotalWins, p2TotalWins);
                 keepRunning = false;
             } else {
-                launchGame(choice, gameMode);
+                int winner = launchGame(choice, gameMode);
+                if (winner == 1) {
+                    p1TotalWins++;
+                } else if (winner == 2) {
+                    p2TotalWins++;
+                }
                 // After launchGame returns, display the game-specific scoreboard
                 System.out.println("\n[System] Returning to Main Menu...");
+                System.out.println("Current Tally - Player 1: " + p1TotalWins + " | Player 2/Computer: " + p2TotalWins);
             }
         }
     }
@@ -63,19 +69,20 @@ public class PlayGames {
         System.out.println("6. Quit");
     }
 
-    private static void launchGame(int choice, int mode) {
+    private static int launchGame(int choice, int mode) {
         // Implementation for each game class goes here
         if (choice == THIMBLE) {
-            FindTheThimble.findTheThimble();
+            return FindTheThimble.findTheThimble();
         } else if (choice == COIN_FLIP) {
-            CoinFlip.coinFlip();
+            return CoinFlip.coinFlip();
         } else if (choice == GUESS_NUM) {
-            GuessTheNumber.main(new String[]{});
+            return GuessTheNumber.playGame();
         } else if (choice == EVEN_ODD) {
-            EvenOdd.main(new String[]{});
+            return EvenOdd.playGame();
         } else if (choice == RED_THREAD) {
-            System.out.println("Find the Red Thread game coming soon!");
+            return FindTheRedThreadFinal.play();
         }
+        return 0;
     }
 
     private static void displayOverallResults(int p1, int p2) {

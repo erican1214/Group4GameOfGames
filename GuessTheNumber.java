@@ -1,4 +1,5 @@
 public class GuessTheNumber {
+<<<<<<< HEAD
     public static void main(String[] args) {
         //Instructions
         System.out.println("Welcome to Guess the Number game!");
@@ -13,6 +14,9 @@ public class GuessTheNumber {
         System.out.println("If the Guesser does not guess the correct number before they run out of guesses, the Selector wins.");
         System.out.println();
 
+=======
+    public static int playGame() {
+>>>>>>> 58c2ec6ac1bdb5f061a0ace7eb5e8f18437f1b31
         //REQUIRES GetInput.java FILE!
         GetInput getInputClass = new GetInput();
         int min = 0;
@@ -62,7 +66,7 @@ public class GuessTheNumber {
                 }
                 if (guess == target) {
                     System.out.println("You WIN!");
-                    break;
+                    return 1;
                 }
                 else {
                     if (guess < target) {
@@ -76,6 +80,7 @@ public class GuessTheNumber {
             }
             if (desiredGuesses == 0) {
                 System.out.println("Computer WINS");
+                return 2;
             }
         }
 
@@ -91,7 +96,7 @@ public class GuessTheNumber {
                 }
                 if (correct.equals("Y")) {
                     System.out.println("Computer WINS");
-                    break;
+                    return 2;
                 }
                 else if (correct.equals("N")) {
                     System.out.println("Is the target higher or lower? Press 'H' for 'HIGHER', Press 'L' for 'LOWER'");
@@ -111,8 +116,13 @@ public class GuessTheNumber {
             }
             if (desiredGuesses == 0) {
                 System.out.println("You WIN");
+                return 1;
             }
         }
+        return 0;
+    }
 
+    public static void main(String[] args) {
+        playGame();
     }
 };

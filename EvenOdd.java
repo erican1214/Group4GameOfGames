@@ -1,4 +1,5 @@
 public class EvenOdd {
+<<<<<<< HEAD
     public static void main(String[] args) {
         //Instructions
         System.out.println("Welcome to Even Odd game!");
@@ -13,6 +14,9 @@ public class EvenOdd {
         System.out.println("Whichever player wins the most rounds first wins!");
         System.out.println();
         
+=======
+    public static int playGame() {
+>>>>>>> 58c2ec6ac1bdb5f061a0ace7eb5e8f18437f1b31
         //REQUIRES GetInput.java FILE!
         GetInput getInputClass = new GetInput();
         int min = 1;
@@ -71,9 +75,11 @@ public class EvenOdd {
         }
         if (player1Score == threshold) {
             System.out.println("Player 1 wins!");
+            return 1;
         }
         else {
             System.out.println("Player 2 wins!");
+            return 2;
         }
     }
 
@@ -89,5 +95,9 @@ public class EvenOdd {
 
     public static int getSum(int num1, int num2) {
         return num1 + num2;
+    }
+
+    public static void main(String[] args) {
+        playGame();
     }
 }

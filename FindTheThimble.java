@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class FindTheThimble {
-    public static void findTheThimble(){
+    public static int findTheThimble(){
     Scanner scnr = new Scanner(System.in);
     int numOfGames;
     int who;
@@ -121,13 +121,15 @@ public class FindTheThimble {
         // says who won
         if ((player1Score > (numOfGames/2))){
             System.out.println("Player 1 wins the whole game");
+            return 1;
         }
         if ((player2Score > (numOfGames/2))){
             System.out.println("Player 2 wins the whole game");
+            return 2;
         }
 
     }
-
+    return 0;
 }
 
 

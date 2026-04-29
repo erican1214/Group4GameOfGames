@@ -44,7 +44,7 @@ There are two players: Guesser and Selector, and is only player vs. computer. Th
 #### Deployment
 This file REQUIRES GetInput.java to run properly. Afterwards, the game can be run under the main function. Choice menus are case sensitive.
 
-#### FindTheRedThreadFinal.java
+### FindTheRedThreadFinal.java
 Summary
 There are two players: Player 1 and Player 2 (Computer). There are 20 spools in a box, one of which is red. Both players choose a number X between 1 and 10, which is how many spools they will pull per turn. Players alternate pulling X spools from the box. The spools are not returned after being pulled. If a player pulls the red spool, that player wins immediately.
 
