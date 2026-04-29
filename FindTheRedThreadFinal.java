@@ -17,7 +17,7 @@ public static void play() {
     int maxPull = 10;
     String redSpool = "red";
     String Player1 = "Player 1";
-    String Player2 = "Computer";
+    String Player2 = "Player 2";
     int testCode = 100;
 
     GetInput input = new GetInput();
