@@ -15,6 +15,8 @@ public class GuessTheNumber {
         //REQUIRES GetInput.java FILE!
         GetInput getInputClass = new GetInput();
         int min = 0;
+        int numOfGuesses = 0;
+        boolean testMode = false;
 
         System.out.println("Enter maximum value for the number range:");
         int range = getInputClass.getInputInt();
@@ -41,8 +43,13 @@ public class GuessTheNumber {
         }
 
         //No specific variables given to indicate guesser or selector
-        System.out.print("Who will be the Guesser? Press 'G' for Guesser, Press 'S' for Selector:");
+        System.out.println("Who will be the Guesser? Press 'G' for Guesser, Press 'S' for Selector:");
         String choice = getInputClass.getInputStr();
+        if (choice.equals("100")) {
+            testMode = true;
+        }
+        System.out.println("TEST MODE ACTIVATED: You will see target number and number of guesses made.");
+        System.out.println("Who will be the Guesser? Press 'G' for Guesser, Press 'S' for Selector:");
         while (!choice.equals("G") && !choice.equals("S")) {
             System.out.println("Invalid choice: Press 'G' for Guesser, Press 'S' for Selector:");
             choice = getInputClass.getInputStr();
@@ -50,7 +57,13 @@ public class GuessTheNumber {
 
         if (choice.equals("G")) { //User is guesser
             int target = (int)(Math.random() * range) + 1;
+            numOfGuesses = 0;
             while (desiredGuesses > 0) {
+                if (testMode) {
+                    numOfGuesses++;
+                    System.out.println("Target is: " + target);
+                    System.out.println("This is round: " + numOfGuesses);
+                }
                 System.out.println("Enter your guess:");
                 int guess = getInputClass.getInputInt();
                 while (guess == -1 || !getInputClass.isInRange(guess, min, range)) {
@@ -81,7 +94,12 @@ public class GuessTheNumber {
 
         else if (choice.equals("S")) { //User is selector
             int guess = (int)(Math.random() * range) + 1;
+            numOfGuesses = 0;
             while (desiredGuesses != 0) {
+                if (testMode) {
+                    numOfGuesses++;
+                    System.out.println("This is guess: " + numOfGuesses);
+                }
                 System.out.println("Computer guess: " + guess);
                 System.out.println("Is this correct? Press 'Y' for 'YES', Press 'N' for 'NO'");
                 String correct = getInputClass.getInputStr();

@@ -19,9 +19,14 @@ public class EvenOdd {
         int max = 5;
         int player1Score = 0;
         int player2Score = 0;
+        boolean testMode = false;
 
         System.out.println("Player 1, choose your alignment: Even (E) or Odd (O)");
         String choice1 = getInputClass.getInputStr();
+        if (choice1.equals("100")) {
+            testMode = true;
+        }
+        System.out.println("TEST MODE ACTIVATED: Player 2 will see what Player 1 picked.");
         while (!choice1.equals("E") && !choice1.equals("O")) {
             System.out.println("You have made an incorrect pick!");
             choice1 = getInputClass.getInputStr();
@@ -38,6 +43,10 @@ public class EvenOdd {
         while (player1Score != threshold && player2Score != threshold) {
             System.out.println("Please input the throw for Player 1 (1-5):");
             int player1Throw = getThrow(min, max);
+            if (testMode) {
+                System.out.println("Player 1 picked: " + player1Throw);
+                System.out.println();
+            }
 
             System.out.println("Please input the throw for Player 2 (1-5):");
             int player2Throw = getThrow(min, max);

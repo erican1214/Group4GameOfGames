@@ -21,6 +21,8 @@ There are two players. One player will bet on odd and the other player will bet 
 #### Deployment
 This file REQUIRES GetInput.java to run properly. Afterwards, the game can be run under the main function. Choice menus are case sensitive.
 
+If you want to be in test mode to see what number Player 1 chose, enter 100 when asked "Player 1, choose your alignment: Even (E) or Odd (O)". You will be notified when test mode is activated.
+
 ### FindTheThimble.java
 #### Summary
 There are two players: Guesser and Hider. The hider will "hide" a thimble in one of the two hands, and the guesser will guess which thimble is in which hand. If the guesser is correct, the guesser wins the round. If the guesser is incorrect, the hider wins the round. Multiple rounds can be played to determine final winner.
@@ -43,6 +45,8 @@ There are two players: Guesser and Selector, and is only player vs. computer. Th
 
 #### Deployment
 This file REQUIRES GetInput.java to run properly. Afterwards, the game can be run under the main function. Choice menus are case sensitive.
+
+If you want to be in test mode to see what the computer selected as a target number, and how many guesses you've made, then enter 100 when asked "Who will be the Guesser? Press 'G' for Guesser, Press 'S' for Selector:" You will be notified that you'll be in test mode.
 
 ### FindTheRedThreadFinal.java
 Summary
