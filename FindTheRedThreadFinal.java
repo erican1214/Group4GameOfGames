@@ -4,12 +4,6 @@ import java.util.Scanner;
 
 public class FindTheRedThreadFinal {
 
-// this will be removed after implemeting the playgames is it just for testing purposes
-public static void main(String[] args) {
-        play();
-    }
-//-------------------------------------------------------------------------------------
-
 public static int play() {
 
     int totalSpools = 20;
