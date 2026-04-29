@@ -52,3 +52,24 @@ There are two players: Player 1 and Player 2 (Computer). There are 20 spools in 
 This file REQUIRES GetInput.java to run properly. After downloading both files into the same folder, the game can be run under the main function.
 
 If you want to be in test mode so that you can see where the red spool is in the box, when being asked "Who will pull first? Enter 1 for Player 1 or 2 for Player 2. Enter 100 for TEST mode." enter 100. You will then be in test mode and can see the full box contents and the position of the red spool before each pull.
+
+### PlayGames.java
+#### Summary
+PlayGames is a menu-driven launcher that allows players to select and play multiple games in a single session. Players can choose between Player vs. Player and Player vs. Computer game modes, then select from a menu of available games. The program tracks overall wins across all games and displays final results when the player quits.
+
+#### Deployment
+This file REQUIRES GetInput.java to run properly. All game files (CoinFlip.java, EvenOdd.java, FindTheThimble.java, GuessTheNumber.java, and FindTheRedThreadFinal.java) must be in the same folder. The program can be run under the main function.
+
+Upon startup, you will be prompted to select a game mode:
+- Enter 1 for Player vs. Player mode
+- Enter 2 for Player vs. Computer mode
+
+After selecting a mode, the main menu will display with the following options:
+- 1. Find the Thimble
+- 2. Coin Flip
+- 3. Guess the Number
+- 4. Even and Odd
+- 5. Find the Red Thread
+- 6. Quit
+
+Select a game by entering the corresponding number. After each game concludes, you will return to the main menu. Enter 6 to quit and view the final tally of overall wins for each player.

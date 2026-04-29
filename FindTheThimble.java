@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-
-public void findTheThimble(){
+public class FindTheThimble {
+    public static void findTheThimble(){
     Scanner scnr = new Scanner(System.in);
     int numOfGames;
     int who;
@@ -131,9 +131,9 @@ public void findTheThimble(){
 }
 
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    findTheThimble();
-
+    //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+    // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+    public static void main(String[] args) {
+        findTheThimble();
+    }
 }

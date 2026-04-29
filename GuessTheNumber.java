@@ -61,7 +61,7 @@ public class GuessTheNumber {
                     guess = getInputClass.getInputInt();
                 }
                 if (guess == target) {
-                    System.out.println("Guesser WINS!");
+                    System.out.println("You WIN!");
                     break;
                 }
                 else {
@@ -75,14 +75,14 @@ public class GuessTheNumber {
                 }
             }
             if (desiredGuesses == 0) {
-                System.out.println("Selector WINS");
+                System.out.println("Computer WINS");
             }
         }
 
         else if (choice.equals("S")) { //User is selector
             int guess = (int)(Math.random() * range) + 1;
             while (desiredGuesses != 0) {
-                System.out.println("Guess: " + guess);
+                System.out.println("Computer guess: " + guess);
                 System.out.println("Is this correct? Press 'Y' for 'YES', Press 'N' for 'NO'");
                 String correct = getInputClass.getInputStr();
                 while (!correct.equals("Y") && !correct.equals("N")) {
@@ -90,11 +90,11 @@ public class GuessTheNumber {
                     correct = getInputClass.getInputStr();
                 }
                 if (correct.equals("Y")) {
-                    System.out.println("Guesser WINS");
+                    System.out.println("Computer WINS");
                     break;
                 }
                 else if (correct.equals("N")) {
-                    System.out.println("Is the target higher or lower? Press 'H' for 'HIGHER', Press 'L for 'LOWER'");
+                    System.out.println("Is the target higher or lower? Press 'H' for 'HIGHER', Press 'L' for 'LOWER'");
                     String hint = getInputClass.getInputStr();
                     while (!hint.equals("H") && !hint.equals("L")) {
                         System.out.println("Invalid answer: Press 'H' for 'HIGHER', Press 'L' for 'LOWER'");
@@ -110,7 +110,7 @@ public class GuessTheNumber {
                 }
             }
             if (desiredGuesses == 0) {
-                System.out.println("Selector WINS");
+                System.out.println("You WIN");
             }
         }
 
