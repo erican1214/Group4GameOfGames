@@ -1,6 +1,5 @@
 public class EvenOdd {
-<<<<<<< HEAD
-    public static void main(String[] args) {
+    public static int playGame() {
         //Instructions
         System.out.println("Welcome to Even Odd game!");
         System.out.println("There are two players: Player 1 vs Player 2");
@@ -13,10 +12,7 @@ public class EvenOdd {
         System.out.println("If the sum is odd, then the player who bet odd will win the round.");
         System.out.println("Whichever player wins the most rounds first wins!");
         System.out.println();
-        
-=======
-    public static int playGame() {
->>>>>>> 58c2ec6ac1bdb5f061a0ace7eb5e8f18437f1b31
+
         //REQUIRES GetInput.java FILE!
         GetInput getInputClass = new GetInput();
         int min = 1;

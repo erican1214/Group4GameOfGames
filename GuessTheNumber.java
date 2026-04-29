@@ -1,7 +1,5 @@
 public class GuessTheNumber {
-<<<<<<< HEAD
-    public static void main(String[] args) {
-        //Instructions
+    public static int playGame() {
         System.out.println("Welcome to Guess the Number game!");
         System.out.println("There are two players: Player vs Computer");
         System.out.println("First, the player will pick a range of numbers for the game.");
@@ -14,9 +12,6 @@ public class GuessTheNumber {
         System.out.println("If the Guesser does not guess the correct number before they run out of guesses, the Selector wins.");
         System.out.println();
 
-=======
-    public static int playGame() {
->>>>>>> 58c2ec6ac1bdb5f061a0ace7eb5e8f18437f1b31
         //REQUIRES GetInput.java FILE!
         GetInput getInputClass = new GetInput();
         int min = 0;
