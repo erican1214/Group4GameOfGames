@@ -138,4 +138,18 @@ public class GuessTheNumber {
     public static void main(String[] args) {
         playGame();
     }
-};
+    public static boolean isValidRange(int range) {
+    return range > 0;
+}
+
+public static boolean isValidGuessCount(int guesses, int range) {
+    int maxGuesses = range / 2;
+    return guesses > 0 && guesses <= maxGuesses;
+}
+
+public static int checkGuess(int guess, int target) {
+    if (guess == target) return 0;
+    else if (guess < target) return -1;
+    else return 1;
+}
+}

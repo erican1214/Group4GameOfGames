@@ -102,6 +102,13 @@ public class EvenOdd {
         return num1 + num2;
     }
 
+    public static int determineWinner(String choice, int throw1, int throw2) {
+        int sum = getSum(throw1, throw2);
+        if (sum % 2 == 0 && choice.equals("E")) return 1;
+        else if (sum % 2 != 0 && choice.equals("O")) return 1;
+        else return 2;
+    }
+
     public static void main(String[] args) {
         playGame();
     }
